@@ -20,6 +20,8 @@ def load_data(data_dir):
         (dtype=np.float32)
         y_test: An numpy array of shape [10000,]. 
         (dtype=np.int32)
+    """
+    ### YOUR CODE HERE
     data_path = os.listdir(data_dir)
     x_train = np.array([[]]).reshape(0,3072)
     y_train = np.array([])
@@ -39,6 +41,7 @@ def load_data(data_dir):
             x_train = np.concatenate((x_cur,x_train), axis=0)
             y_train = np.concatenate((y_cur,y_train), axis=0)
 
+    ### YOUR CODE HERE
 
     return x_train, y_train, x_test, y_test
 
